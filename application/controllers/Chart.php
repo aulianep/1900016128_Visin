@@ -34,19 +34,19 @@ class Chart extends CI_Controller {
         $this->load->view('grafik', $data);
 	}
 
-    function hewan()
+    function ayam()
     {
         //people data
-        $source=file_get_contents('assets/hewan.json');
+        $source=file_get_contents('assets/ayam.json');
         $source=json_decode( preg_replace('/[\x00-\x1F\x80-\xFF]/', '', $source), true );  
         $result=array();
         foreach($source as $row)
         {
-            if(!isset($result[$row['tempat_habitat']]))
+            if(!isset($result[$row['daerah_habitat']]))
             {
-                $result[$row['tempat_habitat']]=array($row['jenis_hewan']);
+                $result[$row['daerah_habitat']]=array($row['jenis_ayam']);
             }else{
-                array_push($result[$row['tempat_habitat']], $row['jenis_hewan']);
+                array_push($result[$row['daerah_habitat']], $row['jenis_ayam']);
             }
         }
         $keys=array_keys($result);
@@ -56,57 +56,57 @@ class Chart extends CI_Controller {
             $people[]=[$row, count($result[$row])];
         }
         $data['PieChartData']=json_encode($people);
-        $data['PieChartTitle']='Data Habitat Hewan';
+        $data['PieChartTitle']='Data Habitat ayam';
 
         //line chart
-        $line=[array('JENIS HEWAN', 'populasi')];
+        $line=[array('JENIS AYAM', 'populasi')];
         foreach($source as $row)
         {
-            // $dat=array($row['jenis_hewan'], (double)$row['populasi']);
+            // $dat=array($row['jenis_ayam'], (double)$row['populasi']);
             // array_push($line, $dat);
             $year=($row['tahun']);
-            if($year=='2018')
+            if($year=='2017')
             {
-                $dat=array($row['jenis_hewan'], (double)$row['populasi']);
+                $dat=array($row['jenis_ayam'], (double)$row['populasi']);
                 array_push($line, $dat);
             }
         }
         $data['LineChartData']=json_encode($line);
-        $data['LineChartTitle']='Data Populasi Hewan Tahun 2019';
+        $data['LineChartTitle']='Data Populasi Ayam Tahun 2018';
 
         //bar chart
-        $bar=[array('JENIS HEWAN', 'POPULASI 2018', 'POPULASI 2019')];
+        $bar=[array('JENIS AYAM', 'POPULASI 2017', 'POPULASI 2018')];
         foreach($source as $row)
         {
             $year=($row['tahun']);
-            $hewan=($row['jenis_hewan']);
-            if($year=='2018')
+            $ayam=($row['jenis_ayam']);
+            if($year=='2017')
             {
-                if(!isset($totalData['2018'][$hewan]))
+                if(!isset($totalData['2017'][$ayam]))
                 {
-                    $totalData['2018'][$hewan]=$row['populasi'];
+                    $totalData['2017'][$ayam]=$row['populasi'];
                 }else{
-                    array_push($totalData['2018'][$hewan],$row['populasi']);
+                    array_push($totalData['2017'][$ayam],$row['populasi']);
                 }
             }
-            if($year=='2019')
+            if($year=='2018')
             {
-                if(!isset($totalData['2019'][$hewan]))
+                if(!isset($totalData['2018'][$ayam]))
                 {
-                    $totalData['2019'][$hewan]=$row['populasi'];
+                    $totalData['2018'][$ayam]=$row['populasi'];
                 }else{
-                    array_push($totalData['2019'][$hewan],$row['populasi']);
+                    array_push($totalData['2018'][$ayam],$row['populasi']);
                 }
             }
         }
-        $hewan=array_keys($totalData['2018']);
-        foreach(array_keys($totalData['2018']) as $row)
+        $ayam=array_keys($totalData['2017']);
+        foreach(array_keys($totalData['2017']) as $row)
         {
-            $dat=[$row, ($totalData['2018'][$row]), ($totalData['2019'][$row])];
+            $dat=[$row, ($totalData['2017'][$row]), ($totalData['2018'][$row])];
             array_push($bar, $dat);
         }
         $data['BarChartData']=json_encode($bar);
-        $data['BarChartTitle']='Perbandingan Populasi Hewan Tahun 2018 dan 2019';
+        $data['BarChartTitle']='Perbandingan Populasi Ayam Tahun 2017 dan 2018';
         $this->load->view('grafik', $data);
         // echo json_encode($bar);
     }

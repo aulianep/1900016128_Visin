@@ -54,7 +54,7 @@
           title: '<?php echo $BarChartTitle;?> ',
           legend: { position: 'bottom' },
           hAxis: {
-            title: 'Jenis Hewan',
+            title: 'Jenis Ayam',
           },
           vAxis: {
             title: ''

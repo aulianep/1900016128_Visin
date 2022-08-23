@@ -1,0 +1,104 @@
+[
+    {
+        "tahun": 2017,
+        "jenis_ayam": "Gallus Sonneratii",
+        "daerah_habitat": "India",
+        "populasi": 56478
+    },
+    {
+        "tahun": 2017,
+        "jenis_ayam": "Gallus Lafayatii",
+        "daerah_habitat": "Sri Langka",
+        "populasi": 44435
+    },
+    {
+        "tahun": 2017,
+        "jenis_ayam": "Gallus Gallus",
+        "daerah_habitat": "India",
+        "populasi": 227728
+    },
+    {
+        "tahun": 2017,
+        "jenis_ayam": "Gallus Varius",
+        "daerah_habitat": "Indonesia",
+        "populasi": 54449
+    },
+    {
+        "tahun": 2017,
+        "jenis_ayam": "Gallus Domesticus",
+        "daerah_habitat": "Indonesia",
+        "populasi": 149232
+    },
+    {
+        "tahun": 2017,
+        "jenis_ayam": "Ayam Kedu",
+        "daerah_habitat": "Indonesia",
+        "populasi": 89643
+    },
+    {
+        "tahun": 2017,
+        "jenis_ayam": "Ayam Nunukan",
+        "daerah_habitat": "Indonesia",
+        "populasi": 11338
+    },
+    {
+    
+        "tahun": 2017,
+        "jenis_ayam": "Ayam Sumatara",
+        "daerah_habitat": "Indonesia",
+        "populasi": 56044
+    
+    },
+    {
+        "tahun": 2018,
+        "jenis_ayam": "Gallus Sonneratii",
+        "daerah_habitat": "India",
+        "populasi": 73636
+    },
+    {
+        "tahun": 2018,
+        "jenis_ayam": "Gallus Lafayatii",
+        "daerah_habitat": "Sri Langka",
+        "populasi": 94447
+    },
+    {
+        "tahun": 2018,
+        "jenis_ayam": "Gallus Gallus",
+        "daerah_habitat": "India",
+        "populasi": 78448
+    },
+    {
+        "tahun": 2018,
+        "jenis_ayam": "Gallus Varius",
+        "daerah_habitat": "Indonesia",
+        "populasi": 243546
+    },
+    {
+        "tahun": 2018,
+        "jenis_ayam": "Gallus Domesticus",
+        "daerah_habitat": "Indonesia",
+        "populasi": 96987
+    },
+    {
+        "tahun": 2018,
+        "jenis_ayam": "Ayam Kedu",
+        "daerah_habitat": "Indonesia",
+        "populasi": 55343
+    },
+    {
+        "tahun": 2018,
+        "jenis_ayam": "Ayam Nunukan",
+        "daerah_habitat": "Indonesia",
+        "populasi": 53574
+    },
+    {
+    
+        "tahun": 2018,
+        "jenis_ayam": "Ayam Sumatara",
+        "daerah_habitat": "Indonesia",
+        "populasi": 954535
+    
+    }
+    
+
+]
